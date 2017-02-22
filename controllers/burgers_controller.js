@@ -2,6 +2,10 @@ var express = require('express')
 var db = require('../models')
 var router = express.Router()
 
+router.get('/favicon.ico', function(req, res) {
+  res.send(204);
+})
+
 router.get('/', function(req, res) {
 	db.burgers.findAll().then(function(dbPosts) {
     res.render('index', {burgers:dbPosts})
