@@ -3,7 +3,7 @@ var db = require('../models')
 var router = express.Router()
 
 router.get('/favicon.ico', function(req, res) {
-  res.send(204);
+  res.send(503);
 })
 
 router.get('/', function(req, res) {
