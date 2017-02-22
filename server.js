@@ -6,7 +6,7 @@ var exphbs = require('express-handlebars')
 var routes = require('./controllers/burgers_controller.js')
 var db = require('./models')
 var app = express()
-const PORT = 3030
+const PORT = process.env.PORT || 3030
 
 app.use(express.static(process.cwd() + '/public'))
 app.use(bodyParser.urlencoded({extended:false}))
